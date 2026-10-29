@@ -53,7 +53,7 @@ double openAppliance(string aplFile)
 
     if (rate < 0)
     {
-        cout << "Error, enter a proper rate" << endl;
+        cerr << "Error, enter a proper rate" << endl;
         return -1;
     }
 
@@ -354,7 +354,7 @@ void createBill(string fileName)
 
     if (b.month < 1 || b.month > 12 || b.cost < 0)
     {
-        cout << "Error, month must be 1-12 and the amount cannot be negative" << endl;
+        cerr << "Error, month must be 1-12 and the amount cannot be negative" << endl;
         return;
     }
 
@@ -381,7 +381,7 @@ void updateBill(string fileName)
 
     if (choice < 1 || choice > total)
     {
-        cout << "Error, invalid number" << endl;
+        cerr << "Error, invalid number" << endl;
         return;
     }
 
