@@ -62,13 +62,13 @@ double openAppliance(string aplFile)
     {
         if (apl.wattage < 0)
         {
-            cout << "Error, wattage is a negative number" << endl;
+            cerr << "Error, wattage is a negative number" << endl;
             return -1;
         }
 
         if (apl.hours < 0)
         {
-            cout << "Error, hours is a negative number" << endl;
+            cerr << "Error, hours is a negative number" << endl;
             return -1;
         }
 
@@ -201,7 +201,7 @@ void createAppliance(string fileName)
 
     if (a.wattage < 0 || a.hours < 0)
     {
-        cout << "Error, wattage and hours cannot be negative" << endl;
+        cerr << "Error, wattage and hours cannot be negative" << endl;
         return;
     }
 
@@ -228,7 +228,7 @@ void updateAppliance(string fileName)
 
     if (choice < 1 || choice > total)
     {
-        cout << "Error, invalid number" << endl;
+        cerr << "Error, invalid number" << endl;
         return;
     }
 
@@ -243,7 +243,7 @@ void updateAppliance(string fileName)
 
     if (newApl.wattage < 0 || newApl.hours < 0)
     {
-        cout << "Error, wattage and hours cannot be negative. Nothing was saved." << endl;
+        cerr << "Error, wattage and hours cannot be negative. Nothing was saved." << endl;
         return;
     }
 
@@ -292,7 +292,7 @@ void deleteAppliance(string fileName)
 
     if (choice < 1 || choice > total)
     {
-        cout << "Error, invalid number" << endl;
+        cerr << "Error, invalid number" << endl;
         return;
     }
 
@@ -394,7 +394,7 @@ void updateBill(string fileName)
 
     if (newBill.month < 1 || newBill.month > 12 || newBill.cost < 0)
     {
-        cout << "Error, month must be 1-12 and the amount cannot be negative. Nothing was saved." << endl;
+        cerr << "Error, month must be 1-12 and the amount cannot be negative. Nothing was saved." << endl;
         return;
     }
 
@@ -441,7 +441,7 @@ void deleteBill(string fileName)
 
     if (choice < 1 || choice > total)
     {
-        cout << "Error, invalid number" << endl;
+        cerr << "Error, invalid number" << endl;
         return;
     }
 
